@@ -223,7 +223,7 @@ rag-question-answering-system/
 
 ## Author
 
-**Vikas Gupta**
+**Vikash Gupta**
 
 [![GitHub](https://img.shields.io/badge/GitHub-VikashITB-181717?style=flat-square&logo=github)](https://github.com/VikashITB)
 

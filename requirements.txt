@@ -1,0 +1,43 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# RAG QA System — Python Dependencies
+# ──────────────────────────────────────────────────────────────────────────────
+# Install with: pip install -r requirements.txt
+# Tested on Python 3.10+
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0        # ASGI server with WebSocket/HTTP2 support
+python-multipart==0.0.9          # Required for FastAPI file upload (UploadFile)
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.7.1                  # Request/response schema validation
+pydantic-settings==2.2.1         # Optional: for settings management via env vars
+
+# ── PDF Extraction ────────────────────────────────────────────────────────────
+pymupdf==1.24.3                  # PyMuPDF (import as 'fitz') — fast, reliable PDF parsing
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers==2.7.0     # Wraps HuggingFace models; provides all-MiniLM-L6-v2
+torch==2.3.0                     # PyTorch backend for sentence-transformers (CPU build)
+# NOTE: For CPU-only environments, you can also use:
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# ── Vector Store ──────────────────────────────────────────────────────────────
+faiss-cpu==1.8.0                 # Facebook AI Similarity Search — exact + approximate ANN
+
+# ── Numeric Computing ─────────────────────────────────────────────────────────
+numpy==1.26.4                    # Required by FAISS and sentence-transformers
+
+# ── LLM API ───────────────────────────────────────────────────────────────────
+anthropic==0.28.0                # Anthropic Python SDK for Claude models
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.7           # For testing async FastAPI endpoints
+httpx==0.27.0                    # Async HTTP client used by FastAPI TestClient
+
+# ── Development / Linting (optional) ─────────────────────────────────────────
+# black==24.4.2
+# ruff==0.4.4
+# mypy==1.10.0

@@ -1,0 +1,58 @@
+[
+  {
+    "faiss_id": 0,
+    "document_id": "5612497d-7bb2-4588-a971-e344e115da55",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 1,
+    "document_id": "f6f2fb40-11cb-4576-9f36-eac6faa8abf4",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 2,
+    "document_id": "df9d5bb2-158a-4741-b35b-dcf57f906c0d",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 3,
+    "document_id": "b22b330d-b589-4cd6-a75b-77632bd2d771",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 4,
+    "document_id": "7cb909d6-b29e-4798-8e61-6f639dfe270d",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 5,
+    "document_id": "c28e75db-e26b-47e4-afa6-99357970a556",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 6,
+    "document_id": "7350f7d6-701e-4819-a023-e323fd694a02",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  },
+  {
+    "faiss_id": 7,
+    "document_id": "0836fcaa-8093-4487-a644-45b18d569301",
+    "filename": "sample.txt",
+    "chunk_index": 0,
+    "text": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. This includes learning from data, reasoning, problem-solving, and understanding natural language. AI systems use techniques such as machine learning, deep learning, and natural language processing."
+  }
+]

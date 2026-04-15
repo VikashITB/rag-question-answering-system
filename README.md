@@ -180,30 +180,43 @@ POST /questions/ask
 ```
 rag-question-answering-system/
 │
-├── app/
-│   ├── main.py                  # FastAPI app entry point, mounts all routes
-│   │
-│   ├── routes/
-│   │   ├── documents.py         # Document upload and status routes
-│   │   └── questions.py         # Question answering routes
-│   │
-│   ├── services/
-│   │   ├── ingestion.py         # Text extraction and chunking pipeline
-│   │   ├── embeddings.py        # SentenceTransformers embedding logic
-│   │   ├── vector_store.py      # FAISS index management
-│   │   └── llm.py               # Groq API integration
-│   │
-│   └── models/
-│       ├── document.py          # Pydantic schemas for documents
-│       └── question.py          # Pydantic schemas for Q&A requests/responses
-│
-├── tests/                       # Unit and integration tests
-│
+├── .env.example                 # Environment variable template
+├── .gitignore
+├── README.md
 ├── architecture.png             # System architecture diagram
 ├── requirements.txt
-├── .env.example
-├── .gitignore
-└── README.md
+├── run.py                       # Application entry point
+│
+├── app/
+│   ├── main.py                  # FastAPI app setup, mounts all routes
+│   │
+│   ├── models/
+│   │   ├── document_store.py    # In-memory document and index state
+│   │   └── schemas.py           # Pydantic schemas for requests and responses
+│   │
+│   ├── routes/
+│   │   ├── documents.py         # Document upload and status endpoints
+│   │   ├── health.py            # Health check endpoint
+│   │   └── questions.py         # Question answering endpoint
+│   │
+│   ├── services/
+│   │   ├── embedder.py          # SentenceTransformers embedding logic
+│   │   ├── ingestion_service.py # Document ingestion and chunking pipeline
+│   │   ├── llm_service.py       # Groq API integration and prompt assembly
+│   │   └── vector_store.py      # FAISS index management and similarity search
+│   │
+│   └── utils/
+│       ├── chunker.py           # Configurable overlapping text chunker
+│       ├── rate_limiter.py      # Request rate limiting utility
+│       └── text_extractor.py    # PDF and TXT text extraction
+│
+├── data/
+│   ├── uploads/                 # Stores uploaded document files
+│   └── vector_store/            # Persisted FAISS index files
+│
+└── tests/
+    ├── test_chunker.py          # Unit tests for chunking logic
+    └── test_rate_limiter.py     # Unit tests for rate limiter
 ```
 
 ---

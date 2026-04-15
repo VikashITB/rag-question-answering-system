@@ -30,7 +30,7 @@ faiss-cpu==1.8.0                 # Facebook AI Similarity Search — exact + app
 numpy==1.26.4                    # Required by FAISS and sentence-transformers
 
 # ── LLM API ───────────────────────────────────────────────────────────────────
-anthropic==0.28.0                # Anthropic Python SDK for Claude models
+groq==0.9.0                      # Groq Python SDK for LLM models
 
 # ── Testing ───────────────────────────────────────────────────────────────────
 pytest==8.2.0

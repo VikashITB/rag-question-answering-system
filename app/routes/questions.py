@@ -49,7 +49,7 @@ def ask_question(request: QuestionRequest):
 
     Prerequisites:
     - At least one document must have status='ready'.
-    - ANTHROPIC_API_KEY must be set in the environment.
+    - GROQ_API_KEY must be set in the environment.
     """
     # ── Validate that we have something to query ──────────────────────────
     vector_store = VectorStoreService.get_instance()

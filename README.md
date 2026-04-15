@@ -221,6 +221,26 @@ rag-question-answering-system/
 
 ---
 
+## Evaluation Notes
+
+### Chunk Size Rationale
+Moderate-sized overlapping chunks were chosen to balance three competing concerns: preserving enough surrounding context for the LLM to reason accurately, maintaining retrieval precision so that the most relevant passage ranks highest, and staying within token efficiency limits for both the embedding model and the LLM prompt. Smaller chunks improve granularity but risk losing context; larger chunks reduce precision and increase prompt size. Overlapping windows mitigate boundary-split issues where a key sentence falls across two chunks.
+
+### Retrieval Failure Case
+Broad or ambiguous questions — such as *"What is this document about?"* — tend to retrieve generic, high-level chunks rather than the most specific and informative passages. Because the query embedding is semantically diffuse, FAISS returns chunks that match the general topic rather than targeted facts. This can be mitigated by adding a **re-ranking layer** (e.g., a cross-encoder model) or applying **query rewriting** to decompose vague questions into more specific sub-queries before retrieval.
+
+### Metrics Tracked
+Each `/questions/ask` response surfaces the following observability fields:
+
+| Metric | Description |
+|---|---|
+| `latency_ms` | End-to-end response time in milliseconds, covering retrieval and LLM generation |
+| `model_used` | The exact LLM model name returned by Groq, ensuring reproducibility and auditability |
+
+Tracking `latency_ms` per request makes it straightforward to detect regressions when switching models or increasing `top_k`, and provides a concrete baseline for performance optimization in future iterations.
+
+---
+
 ## Author
 
 **Vikash Gupta**
